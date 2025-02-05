@@ -1,0 +1,66 @@
+!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <!-- body -->
+  <body>
+    <div class="background"></div>
+    <div id="category_fetch_button" style="margin-top: 250px; color: #fff;">
+      <h2>click on the below button to fetch different types of categories.</h2>
+      <button class="btn1"  onclick="fetchCategories()">FetchCategories</button>
+    </div>
+    <div id="categories_container" style="display: none;">
+      <div id="categories">
+        <h1 style="color: #fff;">Choose any common Category</h1>
+        <select id="category_selection" style="padding: 5px 10px;">
+          <!-- <option value="" disabled selected>Select a Category</option> -->
+          <!-- <option value="music">music</option>
+          <option value="sport_and_leisure">sport_and_leisure</option>
+          <option value="film_and_tv">film_and_tv</option>
+          <option value="arts_and_literature">arts_and_literature</option>
+          <option value="history">history</option>
+          <option value="society_and_culture">society_and_culture</option>
+          <option value="science">science</option>
+          <option value="geography">geography</option>
+          <option value="food_and_drink">food_and_drink</option>
+          <option value="general_knowledge">general_knowledge</option>  -->
+        </select>
+        <button class="btn1" onclick="fetchQuestions()">Fetch Questions</button>
+      </div>
+    </div>
+
+    <!-- Question container -->
+    <div id="questionsContainer" class="app" style="display: none;">
+      <h1 id="head"></h1>
+      <div id="quiz">
+        <p id="level"> </p>
+        <h2 id="question"></h2>
+        <div id="answer-buttons"></div>
+        <div id="result" style="margin-top: 20px;">Score: </div>
+      </div>
+    </div>
+
+
+    <div id="continue-or-endgame" style="display:none; margin-top: 200px;">
+      <button class="btn1" onclick="continueGame()" style="margin-left: 350px; margin-right: 20px;">Continue</button>
+      <button class="btn1" onclick="endGame()">End Game</button>
+    </div>
+
+    <!-- displaying final score -->
+    <div id="final-score" style="display: none;">
+      <h1>Final Score</h1>
+      <p id="player1-final-score"></p>
+      <p id="player2-final-score"></p>
+      <h2 id="winner"></h2>
+    </div>
+
+    
+    <script src="./script.js"></script>
+  </body>
+</html>   
